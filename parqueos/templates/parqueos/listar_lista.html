@@ -1,0 +1,7 @@
+{% extends 'parqueos/base.html' %}
+
+    {% block content %}
+    {% for publi in publi %}
+      <h1>{{publi.nombre}}</h1>
+      {% endfor %}
+    {% endblock %}

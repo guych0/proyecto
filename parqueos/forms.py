@@ -11,13 +11,8 @@ def __init__ (self, *args, **kwargs):
         super(ParqueoForm, self).__init__(*args, **kwargs)
 
 
-
         self.fields["Tipos"].widget = forms.widgets.CheckboxSelectMultiple()
 
-
-
-       self.fields["Tipos"].help_text = "Ingrese la placa del vehiculo"
-
-
+        self.fields["Tipos"].help_text = "Ingrese la placa del vehiculo"
 
         self.fields["Tipos"].queryset = Vehiculos.objects.all()

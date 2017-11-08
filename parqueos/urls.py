@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    #url(r'^$', views.lista_peliculas, name ='lista_peliculas'),
-    #url(r'^pelicula/nueva/$', views.pelicula_nueva, name='pelicula_nueva'),
+    url(r'^$', views.lista_parqueos, name ='lista_parqueos'),
+    url(r'^parqueo/nueva/$', views.parqueo_nuevo, name='parqueo_nuevo'),
     ]
