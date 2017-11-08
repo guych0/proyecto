@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.contrib import messages
 from .forms import ParqueoForm
@@ -7,6 +8,7 @@ def lista_parqueos(request):
     publi = Parqueo.objects.all()
     return render(request,'parqueos/listar_lista.html',{'publi':publi})
 
+@login_required
 def parqueo_nuevo(request):
 
     if request.method =="POST":
@@ -19,4 +21,4 @@ def parqueo_nuevo(request):
             messages.add_message(request, messages.SUCCESS, 'Ingreso Guardado Exitosamente')
     else:
         formulario=ParqueoForm()
-    return render(request, 'parqueos/parqueo_editar.html', {'formulario':formulario})
+    return render(request, 'parqueos/parqueo_editar.html', {'formulario': formulario})

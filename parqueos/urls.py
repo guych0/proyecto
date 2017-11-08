@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^$', views.lista_parqueos, name ='lista_parqueos'),
-    url(r'^parqueo/nueva/$', views.parqueo_nuevo, name='parqueo_nuevo'),
+    #url(r'^$', views.lista_parqueos, name ='lista_parqueos'),
+    url(r'^$', views.parqueo_nuevo, name='parqueo_nuevo'),
     ]
