@@ -4,12 +4,12 @@ from django.contrib import messages
 from .forms import ParqueoForm
 from parqueos.models import Parqueo, Tipos
 # Create your views here.
-def lista_parqueos(request):
+def lista(request):
     publi = Parqueo.objects.all()
     return render(request,'parqueos/listar_lista.html',{'publi':publi})
 
 @login_required
-def parqueo_nuevo(request):
+def nuevo(request):
 
     if request.method =="POST":
         formulario = ParqueoForm(request.POST)

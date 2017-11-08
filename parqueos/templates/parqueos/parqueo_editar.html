@@ -2,7 +2,7 @@
 
     {% block content %}
     {% if user.is_authenticated %}
-       
+       <a class="btn btn-default" href=""><span class="glyphicon glyphicon-pencil"></span></a>
        {%else%}
        <h1>Iniciar sesion para Editar</h1>
        {% endif %}
