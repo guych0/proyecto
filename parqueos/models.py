@@ -14,7 +14,6 @@ class Vehiculos(models.Model):
 class Parqueo(models.Model):
 
     nombre = models.CharField(max_length=30)
-    direccion = models.CharField(max_length=75)
     fecha_inicial = models.DateField()
     fecha_salida = models.DateField()
     transportes = models.ManyToManyField(Vehiculos,through='Tipos')
@@ -23,7 +22,7 @@ class Parqueo(models.Model):
 
        return self.nombre
 
-   
+
 class Tipos(models.Model):
 
     parqueo = models.ForeignKey(Parqueo, on_delete=models.CASCADE)
